@@ -1,4 +1,5 @@
 export default {
   PORT: process.env.PORT || 4000,
-  DB_URL: "mongodb://localhost/tweet-development"
+  DB_URL: "mongodb://localhost/tweeter-development",
+  GRAPHQL_PATH: "/graphql"
 };
