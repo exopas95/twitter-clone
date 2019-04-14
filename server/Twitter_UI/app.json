@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Twitter-System",
-    "slug": "Twitter-System",
+    "name": "Twitter_UI",
+    "slug": "Twitter_UI",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
