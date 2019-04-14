@@ -1,27 +1,14 @@
 import express from "express";
-import { ApolloServer, gql } from "apollo-server-express";
 import { createServer } from "http";
 
 import "./config/db";
 import constants from "./config/constants";
-import typeDefs from "./graphql/schema";
-import resolvers from "./graphql/resolvers";
+import middlewares from "./config/middlewares";
 import mocks from "./mocks";
 
 const app = express(); // create an instance of express
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  playground: {
-    endpoint: constants.GRAPHQL_PATH,
-    settings: {
-      "editor.theme": "light"
-    }
-  }
-});
-
-server.applyMiddleware({ app });
+middlewares(app);
 
 const graphQLServer = createServer(app);
 
