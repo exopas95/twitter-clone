@@ -7,6 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@types/react": "^16.8.14",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "^2.5.1",
     "apollo-link": "^1.2.11",
