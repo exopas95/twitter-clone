@@ -7,6 +7,7 @@ const Root = styled.View`
   background-color: white;
   flex: 1;
   justify-content: center;
+  background-color: #f2f2f2;
 `;
 
 //const T = styled.Text``;
