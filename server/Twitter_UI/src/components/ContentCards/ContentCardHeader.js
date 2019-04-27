@@ -8,8 +8,25 @@ const Root = styled.View`
   background-color: purple;
 `;
 
+const Avatar = styled.View`
+  flex 1;
+  background-color: red;
+  align-self: stretch
+`;
+
+const Container = styled.View`
+  flex 1;
+  background-color: blue;
+  align-self: stretch
+`;
+
 function ContentCardHeader() {
-  return <Root />;
+  return (
+    <Root>
+      <Avatar />
+      <Container />
+    </Root>
+  );
 }
 
 export default ContentCardHeader;

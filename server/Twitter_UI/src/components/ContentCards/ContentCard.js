@@ -6,7 +6,7 @@ import ContentCardBottom from "./ContentCardBottom";
 
 const Root = styled.View`
   min-height: 180;
-  background-color: red;
+  background-color: ${props => props.theme.WHITE};
   width: 100%;
   shadow-color: ${props => props.theme.SECONDARY};
   shadow-offset: 0px 2px;
@@ -16,14 +16,25 @@ const Root = styled.View`
 
 const ContentContainer = styled.View`
   flex: 1;
-  background-color: blue;
+  padding: 10px 20px 10px 5px;
 `;
+
+const ContentText = styled.Text`
+  font-size: 14;
+  text-align: left;
+  font-weight: 500;
+  color: ${props => props.theme.SECONDARY};
+`;
+
+const text = "Eum Se Woong COOOOOOL";
 
 function ContentCard() {
   return (
     <Root>
       <ContentCardHeader />
-      <ContentContainer />
+      <ContentContainer>
+        <ContentText>{text}</ContentText>
+      </ContentContainer>
       <ContentCardBottom />
     </Root>
   );
