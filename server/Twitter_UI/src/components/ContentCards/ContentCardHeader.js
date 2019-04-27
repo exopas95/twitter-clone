@@ -11,13 +11,13 @@ const Root = styled.View`
 const Avatar = styled.View`
   flex 1;
   background-color: red;
-  align-self: stretch
+  align-self: stretch;
 `;
 
 const Container = styled.View`
   flex 1;
   background-color: blue;
-  align-self: stretch
+  align-self: stretch;
 `;
 
 function ContentCardHeader() {
