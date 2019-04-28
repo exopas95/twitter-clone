@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers, reducer } from "redux";
 
 import nav from "./navigation";
 

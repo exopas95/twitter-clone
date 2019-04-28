@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-  createStackNavigator,
+  StackNavigator,
   createAppContainer,
   createTabNavigator
 } from "react-navigation";
@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 
 import HomeScreen from "./Screens/HomeScreen";
 
-const AppMainNav = createStackNavigator({
+const AppMainNav = StackNavigator({
   Home: {
     screen: HomeScreen
   }
@@ -23,15 +23,7 @@ class AppNavigator extends Component {
     return <AppMainNav navigation={nav} />;
   }
 }
-/*
-const AppContainer = createAppContainer(AppNavigator);
 
-class AppNavigation extends Component {
-  render() {
-    <AppContainer screenProps={this.props} />;
-  }
-}
-*/
 export default connect(state => ({
   nav: state.nav
 }))(AppNavigator);

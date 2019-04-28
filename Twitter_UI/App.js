@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { UIManager } from "react-native";
 import { ApolloProvider } from "react-apollo";
+import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
 import { store, client } from "./src/store";
