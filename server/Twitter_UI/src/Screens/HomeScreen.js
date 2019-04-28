@@ -4,20 +4,31 @@ import styled from "styled-components/native";
 import ContentCard from "../components/ContentCards/ContentCard";
 
 const Root = styled.View`
-  background-color: white;
   flex: 1;
-  justify-content: center;
+  padding-top: 5;
   background-color: #f2f2f2;
 `;
 
-//const T = styled.Text``;
+const List = styled.ScrollView``;
 
 class HomeScreen extends Component {
   state = {};
   render() {
     return (
       <Root>
-        <ContentCard />
+        <List>
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+        </List>
       </Root>
     );
   }

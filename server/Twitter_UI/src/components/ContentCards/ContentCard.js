@@ -8,15 +8,17 @@ const Root = styled.View`
   min-height: 180;
   background-color: ${props => props.theme.WHITE};
   width: 100%;
+  padding: 7px;
   shadow-color: ${props => props.theme.SECONDARY};
   shadow-offset: 0px 2px;
   shadow-radius: 2;
   shadow-opacity: 0.1;
+  margin-vertical: 5;
 `;
 
 const ContentContainer = styled.View`
   flex: 1;
-  padding: 10px 20px 10px 5px;
+  padding: 10px 20px 10px 0px;
 `;
 
 const ContentText = styled.Text`

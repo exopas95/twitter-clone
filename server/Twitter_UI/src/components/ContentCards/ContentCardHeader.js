@@ -14,7 +14,6 @@ const Root = styled.View`
 
 const AvatarContainer = styled.View`
   flex: 0.2;
-  padding-left: 5;
   justify-content: center;
   align-self: stretch;
 `;
