@@ -11,7 +11,7 @@ const Root = styled.View`
 
 const List = styled.ScrollView``;
 
-class HomeScreen extends Component {
+class HomeScreen extends React.Component {
   state = {};
   render() {
     return (

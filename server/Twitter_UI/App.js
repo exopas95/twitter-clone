@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { store, client } from "./src/store";
 import { colors } from "./src/utils/constants";
 
-import HomeScreen from "./src/Screens/HomeScreen";
+import AppNavigation from "./src/navigations";
 
 if (UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -18,7 +18,7 @@ export default class App extends React.Component {
     return (
       <ApolloProvider store={store} client={client}>
         <ThemeProvider theme={colors}>
-          <HomeScreen />
+          <AppNavigation />
         </ThemeProvider>
       </ApolloProvider>
     );
