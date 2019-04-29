@@ -11,6 +11,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import ExploreScreen from "./Screens/ExploreScreen";
 import NotificationsScreen from "./Screens/NotificationsScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
+import LoginScreen from "./Screens/LoginScreen";
 
 import { colors } from "./utils/constants";
 
@@ -102,23 +103,16 @@ class AppNavigator extends Component {
       dispatch: this.props.dispatch,
       state: this.props.nav
     });
+    if (!this.props.user.isAuthenticated) {
+      return <LoginScreen />;
+    }
     return <AppMainNav navigation={nav} />;
   }
 }
 
-/*
-class AppNavigator extends Component {
-  render() {
-    const nav = {
-      dispatch: this.props.dispatch,
-      state: this.props.nav
-    };
-    return <AppMainNav navigation={nav} />;
-  }
-}
-*/
 export default connect(state => ({
-  nav: state.nav
+  nav: state.nav,
+  user: state.user
 }))(AppNavigator);
 
 export const router = AppMainNav.router;
