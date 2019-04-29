@@ -4,7 +4,6 @@ import { createServer } from "http";
 import "./config/db";
 import constants from "./config/constants";
 import middlewares from "./config/middlewares";
-import mocks from "./mocks";
 
 const app = express(); // create an instance of express
 

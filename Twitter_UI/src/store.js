@@ -6,7 +6,7 @@ import thunk from "redux-thunk";
 import reducers from "./reducers";
 
 const networkInterface = createNetworkInterface({
-  uri: "http://localhost:4000/graphql"
+  uri: "http://10.0.2.2:4000/graphql"
 });
 
 export const client = new ApolloClient({

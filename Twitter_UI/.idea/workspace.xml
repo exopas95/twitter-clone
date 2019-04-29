@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e75f87b2-2817-4c09-a0a3-738251336392" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.idea/Twitter_UI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/assets/splash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/Screens/HomeScreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/components/ContentCards/ContentCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/components/ContentCards/ContentCardBottom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/components/ContentCards/ContentCardHeader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/components/Welcome.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/navigations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/reducers/navigaton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/src/utils/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Twitter_UI/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +56,9 @@
     <session id="-1685133254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -101,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -111,7 +88,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="120" />
     <option name="y" value="111" />
     <option name="width" value="1400" />
@@ -134,8 +111,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,7 +178,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>

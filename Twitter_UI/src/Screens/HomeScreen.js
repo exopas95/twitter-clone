@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components/native";
+import { graphql } from "react-apollo";
 
 import ContentCard from "../components/ContentCards/ContentCard";
+
+import GET_TWEETS_QUERY from "../graphql/queries/getTweets";
 
 const Root = styled.View`
   flex: 1;
@@ -34,4 +37,4 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen;
+export default graphql(GET_TWEETS_QUERY)(HomeScreen);
