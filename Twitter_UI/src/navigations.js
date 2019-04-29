@@ -13,6 +13,8 @@ import NotificationsScreen from "./Screens/NotificationsScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import LoginScreen from "./Screens/LoginScreen";
 
+import HeaderAvatar from "./components/HeaderAvatar";
+
 import { colors } from "./utils/constants";
 
 const TAB_ICON_SIZE = 20;
@@ -77,7 +79,10 @@ const Tabs = TabNavigator(
 const AppMainNav = StackNavigator(
   {
     Home: {
-      screen: Tabs
+      screen: Tabs,
+      navigationOptions: () => ({
+        headerLeft: <HeaderAvatar />
+      })
     }
   },
   {
@@ -90,8 +95,7 @@ const AppMainNav = StackNavigator(
       },
       headerTitleStyle: {
         fontWeight: "bold",
-        color: colors.SECONDARY,
-        alignSelf: "center"
+        color: colors.SECONDARY
       }
     })
   }
