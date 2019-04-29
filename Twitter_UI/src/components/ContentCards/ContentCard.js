@@ -28,16 +28,14 @@ const ContentText = styled.Text`
   color: ${props => props.theme.SECONDARY};
 `;
 
-const text = "Eum Se Woong COOOOOOL";
-
-function ContentCard() {
+function ContentCard({ text, user, createdAt, favoriteCount }) {
   return (
     <Root>
-      <ContentCardHeader />
+      <ContentCardHeader {...user} createdAt={createdAt} />
       <ContentContainer>
         <ContentText>{text}</ContentText>
       </ContentContainer>
-      <ContentCardBottom />
+      <ContentCardBottom favoriteCount={favoriteCount} />
     </Root>
   );
 }

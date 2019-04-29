@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import distanceInWordsToNow from "date-fns/distance_in_words_to_now";
 
 import { fakeAvatar } from "../../utils/constants";
 
@@ -56,28 +57,29 @@ const MetaText = styled.Text`
   color: ${props => props.theme.LIGHT_GRAY};
 `;
 
-const username = "Sewoong Eum";
-const firstName = "Sewoong";
-const lastName = "Eum";
 const createdAt = "1 day ago";
-const avatar = fakeAvatar;
 
-function ContentCardHeader() {
+function ContentCardHeader({
+  username,
+  firstName,
+  lastName,
+  avatar,
+  createdAt
+}) {
   return (
     <Root>
       <AvatarContainer>
-        <Avatar source={{ uri: avatar }} />
+        <Avatar source={{ uri: avatar || fakeAvatar }} />
       </AvatarContainer>
       <MetaContainer>
         <MetaTopContainer>
           <MetaFullName>
-            {firstName}
-            {lastName}
+            {firstName} {lastName}
           </MetaFullName>
           <MetaText style={{ marginLeft: 5 }}>@{username}</MetaText>
         </MetaTopContainer>
         <MetaBottomContainer>
-          <MetaText>{createdAt}</MetaText>
+          <MetaText>{distanceInWordsToNow(createdAt)} ago</MetaText>
         </MetaBottomContainer>
       </MetaContainer>
     </Root>

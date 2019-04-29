@@ -10,6 +10,8 @@ export default gql`
       user {
         username
         avatar
+        lastName
+        firstName
       }
     }
   }

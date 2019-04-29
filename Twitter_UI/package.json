@@ -10,6 +10,7 @@
     "@appandflow/touchable": "^2.0.0",
     "@types/react": "^16.8.14",
     "apollo-client": "1.9.0-0",
+    "date-fns": "^1.30.1",
     "expo": "^32.0.0",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",

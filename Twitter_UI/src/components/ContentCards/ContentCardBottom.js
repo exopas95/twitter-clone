@@ -25,10 +25,9 @@ const ButtonText = styled.Text`
   color: ${props => props.theme.LIGHT_GRAY};
 `;
 
-const numFavorite = 3;
-const isFavorite = true;
+const isFavorite = false;
 
-function ContentCardBottom() {
+function ContentCardBottom({ favoriteCount }) {
   return (
     <Root>
       <Button>
@@ -37,11 +36,11 @@ function ContentCardBottom() {
           size={ICON_SIZE}
           color={colors.LIGHT_GRAY}
         />
-        <ButtonText>3</ButtonText>
+        <ButtonText>{favoriteCount}</ButtonText>
       </Button>
       <Button>
         <Entypo name="retweet" size={ICON_SIZE} color={colors.LIGHT_GRAY} />
-        <ButtonText>3</ButtonText>
+        <ButtonText>{favoriteCount}</ButtonText>
       </Button>
       <Button>
         <Entypo
@@ -49,7 +48,7 @@ function ContentCardBottom() {
           size={ICON_SIZE}
           color={isFavorite ? "red" : colors.LIGHT_GRAY}
         />
-        <ButtonText>3</ButtonText>
+        <ButtonText>{favoriteCount}</ButtonText>
       </Button>
     </Root>
   );
