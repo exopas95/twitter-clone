@@ -14,7 +14,6 @@ import NotificationsScreen from "./Screens/NotificationsScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import NewTweetScreen from "./Screens/NewTweetScreen";
-import { TweetButton, TweetButtonText } from "./Screens/NewTweetScreen";
 
 import HeaderAvatar from "./components/HeaderAvatar";
 import ButtonHeader from "./components/ButtonHeader";
@@ -95,11 +94,6 @@ const NewTweetModel = StackNavigator(
           >
             <EvilIcons color={colors.PRIMARY} size={25} name="close" />
           </ButtonHeader>
-        ),
-        headerRight: (
-          <TweetButton>
-            <TweetButtonText>Tweet</TweetButtonText>
-          </TweetButton>
         )
       })
     }

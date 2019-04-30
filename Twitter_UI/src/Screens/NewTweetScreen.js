@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components/native";
 import Touchable from "@appandflow/touchable";
-import HeaderAvatar from "../components/HeaderAvatar";
+import { graphql, compose } from "react-apollo";
+import { connect } from "react-redux";
+import { Keyboard } from "react-native";
+
+import CREATE_TWEET_MUTATION from "../graphql/mutations/createTweet";
+import GET_TWEETS_QUERY from "../graphql/queries/getTweets";
 
 const Root = styled.View`
   background-color: ${props => props.theme.WHITE};
@@ -37,7 +42,9 @@ export const TweetButton = styled(Touchable).attrs({
   width: 80;
   height: 35;
   border-radius: 20;
-  margin-right: 10;
+  position: absolute;
+  top: 60%;
+  right: 0;
 `;
 
 export const TweetButtonText = styled.Text`
@@ -52,15 +59,67 @@ class NewTweetScreen extends Component {
 
   _onChangeText = text => this.setState({ text });
 
+  _onCreateTweetPress = async () => {
+    const { user } = this.props;
+
+    await this.props.mutate({
+      variables: {
+        text: this.state.text
+      },
+      optimisticResponse: {
+        __typename: "Mutation",
+        createTweet: {
+          __typename: "Tweet",
+          text: this.state.text,
+          favoriteCount: 0,
+          _id: Math.round(Math.random() * -1000000),
+          createdAt: new Date(),
+          user: {
+            __typename: "User",
+            username: user.username,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            avatar: user.avatar
+          }
+        }
+      },
+      update: (store, { data: { createTweet } }) => {
+        const data = store.readQuery({ query: GET_TWEETS_QUERY });
+        if (!data.getTweets.find(t => t._id === createTweet._id)) {
+          store.writeQuery({
+            query: GET_TWEETS_QUERY,
+            data: { getTweets: [{ ...createTweet }, ...data.getTweets] }
+          });
+        }
+      }
+    });
+
+    Keyboard.dismiss();
+    this.props.navigation.goBack(null);
+  };
+
+  get _buttonDisabled() {
+    return this.state.text.length < 10;
+  }
+
   render() {
     return (
       <Root>
         <Wrapper>
           <Input value={this.state.text} onChangeText={this._onChangeText} />
+          <TweetButton
+            onPress={this._onCreateTweetPress}
+            disabled={this._buttonDisabled}
+          >
+            <TweetButtonText>Tweet</TweetButtonText>
+          </TweetButton>
         </Wrapper>
       </Root>
     );
   }
 }
 
-export default NewTweetScreen;
+export default compose(
+  graphql(CREATE_TWEET_MUTATION),
+  connect(state => ({ user: state.user.info }))
+)(NewTweetScreen);
