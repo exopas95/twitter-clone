@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components/native";
-import Touchable from "@appandflow/touchable";
 import { connect } from "react-redux";
 import { withApollo } from "react-apollo";
 import { connectActionSheet } from "@expo/react-native-action-sheet";
@@ -8,23 +7,15 @@ import { connectActionSheet } from "@expo/react-native-action-sheet";
 import { logout } from "../actions/user";
 
 import Loading from "./Loading";
+import ButtonHeader from "./ButtonHeader";
 
-const AVATAR_SIZE = 30;
+const AVATAR_SIZE = 35;
 const AVATAR_RADIUS = AVATAR_SIZE / 2;
 
 const Avatar = styled.Image`
   height: ${AVATAR_SIZE};
   width: ${AVATAR_SIZE};
   border-radius: ${AVATAR_RADIUS};
-`;
-
-const Button = styled(Touchable).attrs({
-  feedback: "opacity",
-  hitSlop: { top: 20, bottom: 20, right: 20, left: 20 }
-})`
-  margin-left: 15;
-  justify-content: center;
-  align-items: center;
 `;
 
 class HeaderAvatar extends Component {
@@ -48,15 +39,15 @@ class HeaderAvatar extends Component {
   render() {
     if (!this.props.info) {
       return (
-        <Button disabled>
+        <ButtonHeader side="left" disabled>
           <Loading size="small" />
-        </Button>
+        </ButtonHeader>
       );
     }
     return (
-      <Button onPress={this._onOpenActionSheet}>
+      <ButtonHeader side="left" onPress={this._onOpenActionSheet}>
         <Avatar source={{ uri: this.props.info.avatar }} />
-      </Button>
+      </ButtonHeader>
     );
   }
 }

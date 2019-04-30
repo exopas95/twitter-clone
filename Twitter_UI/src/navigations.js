@@ -4,16 +4,20 @@ import {
   StackNavigator,
   TabNavigator
 } from "react-navigation";
+import { Keyboard } from "react-native";
 import { connect } from "react-redux";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Entypo, EvilIcons } from "@expo/vector-icons";
 
 import HomeScreen from "./Screens/HomeScreen";
 import ExploreScreen from "./Screens/ExploreScreen";
 import NotificationsScreen from "./Screens/NotificationsScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import LoginScreen from "./Screens/LoginScreen";
+import NewTweetScreen from "./Screens/NewTweetScreen";
+import { TweetButton, TweetButtonText } from "./Screens/NewTweetScreen";
 
 import HeaderAvatar from "./components/HeaderAvatar";
+import ButtonHeader from "./components/ButtonHeader";
 
 import { colors } from "./utils/constants";
 
@@ -76,13 +80,53 @@ const Tabs = TabNavigator(
   }
 );
 
+const NewTweetModel = StackNavigator(
+  {
+    NewTweet: {
+      screen: NewTweetScreen,
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: (
+          <ButtonHeader
+            side="left"
+            onPress={() => {
+              Keyboard.dismiss();
+              navigation.goBack(null);
+            }}
+          >
+            <EvilIcons color={colors.PRIMARY} size={25} name="close" />
+          </ButtonHeader>
+        ),
+        headerRight: (
+          <TweetButton>
+            <TweetButtonText>Tweet</TweetButtonText>
+          </TweetButton>
+        )
+      })
+    }
+  },
+  {
+    headerMode: "none"
+  }
+);
+
 const AppMainNav = StackNavigator(
   {
     Home: {
       screen: Tabs,
-      navigationOptions: () => ({
-        headerLeft: <HeaderAvatar />
+      navigationOptions: ({ navigation }) => ({
+        headerLeft: <HeaderAvatar />,
+        headerRight: (
+          <ButtonHeader
+            side="right"
+            onPress={() => navigation.navigate("NewTweet")}
+          >
+            <Entypo color={colors.PRIMARY} size={25} name="feather" />
+          </ButtonHeader>
+        )
       })
+    },
+    NewTweet: {
+      screen: NewTweetModel
     }
   },
   {
@@ -95,7 +139,8 @@ const AppMainNav = StackNavigator(
       },
       headerTitleStyle: {
         fontWeight: "bold",
-        color: colors.SECONDARY
+        color: colors.SECONDARY,
+        alignSelf: "center"
       }
     })
   }
