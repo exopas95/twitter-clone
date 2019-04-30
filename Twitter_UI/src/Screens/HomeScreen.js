@@ -45,7 +45,8 @@ class HomeScreen extends Component {
         <FlatList
           contentContainerStyle={{ alignSelf: "stretch" }}
           data={data.getTweets}
-          keyExtractor={item => item._id}
+          keyExtractor={item => item._id.toString()}
+          //keyExtractor={item => item._id}
           renderItem={this._renderItem}
         />
       </Root>

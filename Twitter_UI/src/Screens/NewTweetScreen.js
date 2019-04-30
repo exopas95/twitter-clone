@@ -56,7 +56,6 @@ class NewTweetScreen extends Component {
   state = {
     text: ""
   };
-
   _onChangeText = text => this.setState({ text });
 
   _onCreateTweetPress = async () => {

@@ -5,6 +5,7 @@ import { Entypo } from "@expo/vector-icons";
 import { colors } from "../utils/constants";
 
 import SignUpForm from "../components/SignUpForm";
+import LoginForm from "../components/LoginForm";
 
 const ICON_SIZE = 70;
 
@@ -85,12 +86,21 @@ class LoginScreen extends Component {
 
   _onShowSignupPress = () => this.setState({ showSignup: true });
 
+  _onShowLoginPress = () => this.setState({ showLogin: true });
+
   _onBackPress = () => this.setState({ ...initialState });
   render() {
     if (this.state.showSignup) {
       return (
         <Root>
           <SignUpForm onBackPress={this._onBackPress} />
+        </Root>
+      );
+    }
+    if (this.state.showLogin) {
+      return (
+        <Root>
+          <LoginForm onBackPress={this._onBackPress} />
         </Root>
       );
     }
@@ -105,7 +115,7 @@ class LoginScreen extends Component {
           </ButtonSignUp>
         </ButtonSignUpTextContainer>
         <ButtonLoginTextContainer>
-          <ButtonLogin>
+          <ButtonLogin onPress={this._onShowLoginPress}>
             <ButtonLoginText>Already have an account?</ButtonLoginText>
           </ButtonLogin>
         </ButtonLoginTextContainer>
