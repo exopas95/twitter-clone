@@ -55,6 +55,11 @@ export default `
     login(email: String!, password: String!): Auth
   }
 
+  type Subscription {
+    tweetAdded: Tweet
+    tweetFavorited: Tweet
+  }
+
   schema {
     query: Query
     mutation: Mutation
