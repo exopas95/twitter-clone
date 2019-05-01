@@ -69,7 +69,6 @@ class HomeScreen extends Component {
           contentContainerStyle={{ alignSelf: "stretch" }}
           data={data.getTweets}
           keyExtractor={item => item._id.toString()}
-          //keyExtractor={item => item._id}
           renderItem={this._renderItem}
         />
       </Root>

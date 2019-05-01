@@ -6,12 +6,18 @@ import {
 } from "react-navigation";
 import { Keyboard } from "react-native";
 import { connect } from "react-redux";
-import { FontAwesome, Entypo, EvilIcons } from "@expo/vector-icons";
+import {
+  FontAwesome,
+  Entypo,
+  EvilIcons,
+  AntDesign,
+  SimpleLineIcons
+} from "@expo/vector-icons";
 
 import HomeScreen from "./Screens/HomeScreen";
 import ExploreScreen from "./Screens/ExploreScreen";
 import NotificationsScreen from "./Screens/NotificationsScreen";
-import ProfileScreen from "./Screens/ProfileScreen";
+import MessageScreen from "./Screens/MessageScreen";
 import LoginScreen from "./Screens/LoginScreen";
 import NewTweetScreen from "./Screens/NewTweetScreen";
 
@@ -47,16 +53,16 @@ const Tabs = TabNavigator(
       navigationOptions: () => ({
         headerTitle: "Notifications",
         tabBarIcon: ({ tintColor }) => (
-          <FontAwesome size={TAB_ICON_SIZE} color={tintColor} name="bell" />
+          <SimpleLineIcons size={TAB_ICON_SIZE} color={tintColor} name="bell" />
         )
       })
     },
-    Profile: {
-      screen: ProfileScreen,
+    Message: {
+      screen: MessageScreen,
       navigationOptions: () => ({
-        headerTitle: "Profile",
+        headerTitle: "Message",
         tabBarIcon: ({ tintColor }) => (
-          <FontAwesome size={TAB_ICON_SIZE} color={tintColor} name="user" />
+          <AntDesign size={TAB_ICON_SIZE} color={tintColor} name="mail" />
         )
       })
     }

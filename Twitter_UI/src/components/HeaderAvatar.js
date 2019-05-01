@@ -5,6 +5,7 @@ import { withApollo } from "react-apollo";
 import { connectActionSheet } from "@expo/react-native-action-sheet";
 
 import { logout } from "../actions/user";
+import ProfileScreen from "../Screens/ProfileScreen";
 
 import Loading from "./Loading";
 import ButtonHeader from "./ButtonHeader";
@@ -20,15 +21,15 @@ const Avatar = styled.Image`
 
 class HeaderAvatar extends Component {
   _onOpenActionSheet = () => {
-    const options = ["Logout", "Cancel"];
-    const destructiveButtonIndex = 0;
+    const options = ["Profile", "Logout", "Cancel"];
+    const destructiveButtonIndex = 1;
     this.props.showActionSheetWithOptions(
       {
         options,
         destructiveButtonIndex
       },
       buttonIndex => {
-        if (buttonIndex === 0) {
+        if (buttonIndex === 1) {
           this.props.client.resetStore();
           return this.props.logout();
         }
