@@ -5,7 +5,6 @@ export default {
   signup: async (_, { firstName, lastName, ...rest }) => {
     try {
       const fullName = firstName.concat(lastName);
-      //const [firstName, lastName] = fullName.split(" ");
       const user = await User.create({ firstName, lastName, ...rest });
 
       return {

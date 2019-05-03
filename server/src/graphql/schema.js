@@ -57,11 +57,11 @@ export default `
 
   type Subscription {
     tweetAdded: Tweet
-    tweetFavorited: Tweet
   }
 
   schema {
     query: Query
     mutation: Mutation
+    subscription: Subscription
   }
 `;
