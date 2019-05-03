@@ -16,15 +16,3 @@ export default gql`
     }
   }
 `;
-/*
-i/mport FeedCard from '../../components/FeedCard/FeedCard';
-
-export default gql`
-  subscription {
-    tweetAdded {
-      ...FeedCard
-    }
-  }
-  ${FeedCard.fragments.tweet}
-`;
-*/

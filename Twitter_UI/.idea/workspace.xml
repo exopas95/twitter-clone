@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e75f87b2-2817-4c09-a0a3-738251336392" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/config/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/config/middlewares.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/config/middlewares.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/graphql/resolvers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/graphql/resolvers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/graphql/resolvers/tweet-resolvers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/graphql/resolvers/tweet-resolvers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/graphql/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/graphql/schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../server/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphql/subscriptions/tweetAdded.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/subscriptions/tweetAdded.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,13 +56,13 @@
     <session id="-1685133254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
     </session>
@@ -113,7 +101,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="160" />
     <option name="y" value="279" />
     <option name="width" value="1400" />
@@ -125,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,6 +124,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
