@@ -1,4 +1,4 @@
-# Tweet_System_v2
+# Twitter Clone
 Spirent 2nd screening project  
 
 # Detail
